@@ -1,0 +1,379 @@
+%=======================================
+%TODO Frame 1
+\begin{frame}[b]
+
+\deuxcolonnesbottom{
+
+\begin{center}
+\includegraphics[width=0.4\textwidth]{FF2018.png}
+\end{center}
+
+\mysection{Introduction}
+
+Fighting Fantasy est une série de livres de jeux de rôles pour un seul joueur créée par Steve Jackson (le \href{https://en.wikipedia.org/wiki/Steve_Jackson_(British_game_designer)}{Steve Jackson} anglais et non \href{https://en.wikipedia.org/wiki/Steve_Jackson_(American_game_designer)}{celui de GURPS} qui est américain) et \href{https://en.wikipedia.org/wiki/Ian_Livingstone}{Ian Livingstone}. Le premier volume de la série fut publié en livre de poche par Pufin en 1982.
+
+Cette série propose un système de jeu de rôles très simple qui fut ensuite complété de diverses façons, notamment dans le livre \textit{Dungeoneer, Advanced Fighting Fantasy}, dont nous allons incorporer quelques éléments. Récemment, le système a été repris et customisé dans le jeu de rôles \href{https://melsonian-arts-council.itch.io/troika-numinous-edition}{Troika!}.
+
+Nous avons repris les principales règles de \textit{Dungeoneer, Advanced Fighting Fantasy} pour proposer un jeu très simple, jouable avec tous les types de joueurs, notamment les joueurs débutants et les enfants.
+
+\vspace{0.2cm}
+
+\begin{tabular}{>{\raggedright}p{2cm}l}
+Concepteur               & (C) Steve Jackson \\
+Version originale        &  Version originale 1984 - Copyright Steve Jackson \\
+Website                  & \href{https://www.fightingfantasy.com/}{www.fightingfantasy.com/} \\
+Traduction et adaptation & (C) O. Rey 2021 \\
+Version                  & 2.0 \\
+Octobre 2021             & Corrections diverses \\
+                         & Mise en place des tags pour génération Latex/PDF \\
+Juillet 2022 & Version pour \href{https://itch.io/rouboudou}{itch.io} \\
+\end{tabular}
+
+\mysection{Ce dont vous avez besoin pour jouer}
+
+Chaque joueur doit avoir accès à :
+\begin{myitemize}
+\item Un crayon et du papier,
+\item Trois dés à 6 faces par joueur,
+\item Des choses à picorer et des boissons.
+\end{myitemize}
+
+\mysection{Création du personnage}
+
+\mysubsection{Caractéristiques}
+
+Un personnage possède trois caractéristiques :
+\begin{myitemize}
+\item Sa \textbf{Compétence} (Skill),
+\item Ses \textbf{Points de Vie} (Stamina),
+\item Sa \textbf{Chance} (Luck).
+\end{myitemize}
+
+\textit{Note} : dans les \textit{Livres Dont Vous Êtes le Héros}, "Skill" est traduit par "Habileté" et "Stamina" par "Constitution". Nous préférons la traduction "Compétence" pour "Skill" car elle plus large que la seule notion d'habileté ; elle est au centre des combats, et couvre les autres compétences. Pour ce qui est de "Stamina", même si la traduction "Constitution" est fidèle, la notion de "Point de Vie" est plus idiomatique du jeu de rôle français.
+
+Les règles pour déterminer le score dans les différentes caractéristiques sont montrées dans la table suivante :
+
+\begin{center}
+\begin{tabular}{lcc}
+\textbf{Caractéristique} & \textbf{Création} & \textbf{Acronyme} \\
+Compétence        &      1d6+6 & COMP       \\
+Points de vie     &     2d6+12 & PV         \\
+Chance            &      1d6+6 & CHA        \\
+\end{tabular}
+\end{center}
+
+S'il tombe à 0 PV ou moins, le PJ meurt.
+
+\mysubsection{Test de chance}
+
+Pour faire un test de Chance, jetez 2d6. Si le résultat est inférieur ou égal à votre CHA, alors c'est réussi. Sinon c'est raté. Dans tous les cas, après le test, enlevez 1 point à votre CHA (-1 CHA).
+
+}{
+\mysubsection{Restaurer les caractéristiques}
+
+\vspace{0.1cm}
+
+\begin{tabular}{llp{3cm}}
+\textbf{Caractéristique} & \textbf{Moyen} & \textbf{Effet} \\
+Compétence       & Potion de Compétence  & Retour à la valeur initiale \\
+Points de Vie    & Potion de Vie         & Retour à la valeur initiale \\
+Chance           & Potion de Chance      & Restaure à la valeur initiale + 1 point CHA \\
+\end{tabular}
+
+\mysubsection{Équipement}
+
+Tous les personnages démarrent avec les objets suivants :
+
+\vspace{0.2cm}
+
+\begin{tabular}{lcp{5cm}}
+\textbf{Objet}        & \textbf{Quantité}  & \textbf{Commentaires} \\
+Une épée       & - & - \\
+Un sac à dos   & - & Pour mettre les trésors \\
+Une lanterne   & - & Une lanterne et son combustible suffisent pour une aventure \\
+Des provisions & 10 repas & Chaque repas (-1 repas) restaure 4 PV \\
+               &          & On ne peut pas consommer les provisions pendant un combat \\
+Une potion     & 2 doses  & Une potion de Compétence, de Vie ou de Chance (au choix du joueur) \\
+               &          & Voir la section "Restaurer les Caractéristiques" \\
+\end{tabular}
+
+%=================================================SECTION
+\mysection{Monstres}
+
+\mysubsection{Attaques}
+
+Les montres ont des caractéristiques \textbf{Compétence} et \textbf{Points de Vie}, comme les PJs, mais ils n'ont pas de caractéristique Chance. Ils ont une autre caractéristique : \textbf{Attaques} (ATT) qui représente le nombre de joueurs qu'un monstre peuvent attaquer \textit{en même temps}.
+
+\mysubsection{Exemple}
+
+Le loup-garou est un monstre à deux ATT : il est donc capable d'attaquer au plus 2 PJ dans un même round de combat.
+
+\begin{center}
+\begin{tabular}{lccc}
+ & \textbf{COMP} & \textbf{PV} & \textbf{ATT} \\
+Loup-garou & 8 & 9 & 2 \\
+\end{tabular}
+\end{center}
+
+%=================================================SECTION
+\mysection{Combat}
+
+\mysubsection{Modificateurs de Compétence}
+
+Certains objets (comme une épée magique) peuvent apporter des modificateurs au score de Compétence.
+
+Certaines règles s'appliquent :
+
+\begin{myitemize}
+\item On ne peut utiliser qu'une seule arme en combat (et donc un seul bonus).
+\item La valeur de Compétence ne peut jamais excéder sa valeur initiale.
+\end{myitemize}
+
+\mysubsection{Combat simple}
+
+Un round de combat se passe comme suit : les joueurs et les monstres attaquent en même temps en calculant leur score en \textbf{Attaque} (ATT) :
+\begin{myitemize}
+\item ATT monstre = 2d6 + COMP
+\item ATT PJ = 2d6 + COMP
+\end{myitemize}
+
+Les attaques sont ensuite comparées entre elles.
+
+\begin{center}
+\begin{tabular}{lll}
+\textbf{Comparaison} & \textbf{Effet} & \textbf{Option} \\
+ATT monstre $>$ ATT PJ & PJ : -2 PV      & Jet de chance cas 1 \\
+ATT PJ $>$ ATT monstre & Monstre : -2 PV & Jet de chance cas 2 \\
+ATT PJ = ATT monstre & Aucun effet & - \\
+\end{tabular}
+\end{center}
+
+Le joueur peut décider d'utiliser sa chance, soit pour éviter un coup donné par un monstre (cas d'un échec du PJ en combat), soit pour aggraver la blessure du monstre (cas du succès du PJ en combat).
+
+\begin{center}
+\begin{tabular}{ll}
+\textbf{Jet de chance} & \textbf{Effet}                                        \\
+    Cas 1, réussi          & -1 PV au lieu de -2 PV pour le PJ, -1 CHA      \\
+    Cas 1, raté            & -3 PV au lieu de -2 PV pour le PJ, -1 CHA      \\
+    Cas 2, réussi          & -4 PV au lieu de -2 PV pour le monstre, -1 CHA \\
+    Cas 2, raté            & -1 PV au lieu de -2 PV pour le monstre, -1 CHA \\
+\end{tabular}
+\end{center}
+
+Le combat s'arrête quand l'un des deux adversaire est mort (PV=0) ou s'enfuit.
+
+}
+\end{frame}
+
+%=======================================
+%TODO Frame 2
+\begin{frame}[b]
+
+\deuxcolonnesbottom{%col1
+
+%\begin{minipage}[c][.6\textheight][c]{\linewidth}
+
+Si un PJ s'enfuit, il perd automatiquement 2 PV (dernière blessure infligée par le monstre). La chance peut être utilisée pour réduire les dommages (jet de Chance, cas 1).
+
+\mysubsection{Combat multiple}
+
+Le combat multiple est assez amusant et logique. Nous l'exposons au travers d'exemples.
+
+% subsubsection
+\textit{\mybullet\ Cas d'un monstre possédant une seule ATT contre trois PJ (A, B et C)}
+
+\vspace{0.2cm}
+
+\begin{tabular}{cp{7.1cm}}
+\textbf{Séquence} & \textbf{Action} \\
+         1 & Le MJ tire au sort le PJ qui sera attaqué (ou le choisit), disons C \\
+         2 & Combat simple entre le PJ et le monstre                             \\
+           & Le MJ note le score de ATT du monstre pour ce tour                  \\
+         3 & Les autres PJ peuvent attaquer le monstre (ici A et B)              \\
+           & Si ATT PJ > ATT monstre : -2 PV pour le monstre                     \\
+           & Si ATT PJ <= ATT monstre : le monstre n'a rien                      \\
+           & A et B ne peuvent pas prennent aucun dommage                        \\
+\end{tabular}
+
+\vspace{0.2cm}
+
+On appelle les attaques de A et B, des \textbf{attaques protégées}, car ces derniers ne peuvent pas prendre de dommages.
+
+Au round suivant, le processus recommence.
+
+\vspace{0.2cm}
+
+% subsubsection
+\textit{\mybullet\ Cas d'un monstre à 8 ATT contre quatre PJ (A, B, C et D)}
+
+\textit{Note} : si le nombre d'attaques du monstre est supérieure au nombre de PJ, cela ne signifie pas que le monstre a des attaques supplémentaires. Le nombre d'attaques correspond au nombre maximum de PJ que le monstre peut attaquer. Dans le cas présent, le monstre ne pourra attaquer que les 4 PJ.
+
+\vspace{0.2cm}
+
+\begin{tabular}{cp{7.1cm}}
+\textbf{Séquence} & \textbf{Action} \\
+         1 & Le MJ calcule le score ATT du monstre (2d6 + COMP)                          \\
+           & Ce nombre  est valable pour le round pour tous les combats avec tous les PJ \\
+         2 & Chaque combat est résolu normalement.                                       \\
+\end{tabular}
+
+\vspace{0.2cm}
+
+% subsubsection
+\textit{\mybullet\ Cas de deux PJ (A et B) contre deux monstres (X ayant 2 ATT et Y ayant 1 ATT)}
+
+\vspace{0.2cm}
+
+\begin{tabular}{cp{7.1cm}}
+\textbf{Séquence} & \textbf{Action} \\
+         1 & Le MJ demande aux joueurs quels monstres ils veulent attaquer (ex: A-X et B-Y). \\
+           & Les monstres répondront aux attaques des PJ.                                    \\
+           & Les combats doivent donc se dérouler entre A et X, et B et Y.                   \\
+         2 & Résoudre les combats A-X et B-Y.                                                \\
+         3 & X a une seconde attaque, il peut donc attaquer B en mode attaque protégée.      \\
+\end{tabular}
+
+\vspace{0.2cm}
+
+Tout monstre supplémentaire attaquera de manière aléatoire l'un des deux PJ.
+
+%======================= SECTION
+\mysection{Situations communes}
+
+\mysubsection{Équipement des PJ}
+
+Les PJ ne peuvent pas transporter un nombre illimité de choses. Un PJ ne devrait pas transporter plus de 10 articles d'équipement (hors or et provisions). Les gros objets comptent pour plus d'un point. Le MJ doit être vigilant sur ce point.
+
+\mysubsection{Portes}
+
+\vspace{0.2cm}
+
+\begin{tabular}{>{\raggedright}p{1.8cm}p{6.2cm}}
+\textbf{Type} & \textbf{Commentaire} \\
+Porte magique              & Ont besoin d'un sort pour être ouvertes (ou sous contrôle d'un sorcier) \\
+Porte ordinaire            & Jeter 1d6 : 1-2 la porte est fermée ; 3-6 la porte est ouverte          \\
+Casser une porte ordinaire & Jet réussi de 2d6 strictement sous COMP ; -1 PV                         \\
+                           & Si le jet est supérieur ou égal à COMP, la porte résiste ; -1 PV        \\
+                           & Deuxième tentative : 2d6 + 1 strictement sous COMP pour réussir ; -1 PV \\
+                           & Troisième tentative : 2d6 + 2 strictement... (etc.)                     \\
+Portes secrètes            & Le PJ doit chercher ; le MJ jette 2d6 sous la COMP du PJ                \\
+                           & Si le jet est réussi, la porte est trouvée (mais pas ouverte)           \\
+                           & Jet de CHA pour trouver comment l'ouvrir                                \\
+\end{tabular}
+
+}
+{
+
+\mysubsection{Perte d'un arme}
+
+Si un PJ perd son arme, sa COMP est diminuée de 4 jusqu'à ce qu'il trouve une autre arme.
+
+\mysubsection{Fuite}
+
+Le MJ doit décider si la fuite est possible (par exemple PJ acculé). Si la fuite est possible, la règle ci-dessus (combat simple) s'applique. Idem pour les monstres (intelligents) qui fuient.
+
+\mysubsection{Soudoyer/corrompre}
+
+Les monstres un peu intelligents aiment l'or. Le MJ peut accepter que les PJ tentent de les corrompre. Le MJ décide d'une probabilité de réussite et lance 1d6 (1 sur 6, ou 3 sur 6, etc.). Les monstres peuvent donner quelques informations s'ils se font corrompre.
+
+\mysubsection{Chute}
+
+\vspace{0.2cm}
+
+\begin{tabular}{lp{5.8cm}}
+\textbf{Hauteur} & \textbf{Commentaire} \\
+Inférieur à 2m     & Pas de dommages                                                   \\
+Par tranche de 10m & Faire un jet 2d6 + 1 sous CHA                                     \\
+                   & Ex : 10m, 2d6 + 1 sous CHA ; 30m, 2d6+3 sous CHA                  \\
+                   & Si jet de CHA raté, le PJ est blessé. Perte de PV : 1 + 1 par 10m \\
+\end{tabular}
+
+\vspace{0.2cm}
+
+\mysubsection{Mouvement}
+
+Laissé à l'arbitrage du MJ et suivant les situations (longs couloirs avec pièges).
+
+\mysubsection{Ouvrir un coffre}
+
+Similaire aux portes :
+\begin{myitemize}
+\item Un coffre a 5 chances sur 6 d'être fermé.
+\item Pour ouvrir le coffre : 2d6 strictement sous COMP
+\item Si le PJ retente, à chaque essai, son arme s'abîme et le PJ perd un point de COMP par tentative jusqu'à ce qu'il trouve une autre arme.
+\end{myitemize}
+
+Pour trouver les compartiments secrets dans les coffres, le PJ doit chercher le compartiment. La règle des portes secrètes s'applique.
+
+\mysubsection{Provisions}
+
+Les PJ peuvent consommer leurs provisions à tout moment sauf dans un combat.
+
+Le nombre de provisions dont bénéficient les PJ au départ de l'aventure dépend de différents facteurs : longueur de l'histoire, provisions disponibles dans le scénario, etc.
+
+\begin{center}
+\begin{tabular}{lc}
+\textbf{Aventure} & \textbf{Nombre de provisions} \\
+Courte & 2 \\
+Moyenne & 4 \\
+Longue & 6+ \\
+\end{tabular}
+\end{center}
+
+\mysubsection{Chercher}
+
+Le PJ doit dire ce qu'il cherche. Le MJ fait les jets de dés : 2d6 strictement sous COMP pour trouver.
+
+\mysubsection{Se déplacer en silence}
+
+2d6 strictement sous COMP. Le MJ peut ajouter des malus.
+
+\mysubsection{Monstres errants}
+
+Si les PJ s'attardent trop dans un lieu, il est possible de générer une rencontre avec un monstre errant. le MJ lance 1d6 régulièrement. Si c'est un 1, un monstre a repéré les PJ.
+
+En souterrain :
+
+\begin{center}
+\begin{tabular}{clccc}
+\textbf{1d6} &  \textbf{Créature} &  \textbf{COMP} &  \textbf{PV} &  \textbf{ATT} \\
+    1 & Goblin     &      5 &    3 &     1 \\
+    2 & Orc        &      6 &    3 &     1 \\
+    3 & Gremlin    &      6 &    3 &     1 \\
+    4 & Rat géant  &      5 &    4 &     1 \\
+    5 & Squelette  &      6 &    5 &     1 \\
+    6 & Troll      &      8 &    7 &     3 \\
+\end{tabular}
+\end{center}
+
+\mysubsection{Pickpocket}
+
+Un jet de COMP strictement réussi est un succès. Le MJ peut donner un malus (6-8 est un malus acceptable si la situation ne se prête pas à jouer au pickpocket).
+
+}
+\end{frame}
+
+\begin{comment}
+%=======================================
+\begin{frame}[t]
+
+\deuxcolonnes{%col1
+
+}{
+En extérieur :
+
+\begin{tabular}{clccc}
+\textbf{1d6} &  \textbf{Créature} &  \textbf{COMP} &  \textbf{PV} &  \textbf{ATT} \\
+    1 &  Goblin               &       5 &     3 &      1 \\
+    2 &  Chauve-souris géante &       5 &     4 &      1 \\
+    3 &  Rat Géant            &       5 &     4 &      1 \\
+    4 &  Chien de guerre      &       7 &     6 &      1 \\
+    5 &  Loup-garou           &       8 &     9 &      2 \\
+    6 &  Ogre                 &       8 &    10 &      2 \\
+\end{tabular}
+}
+\end{frame}
+
+
+\end{comment}
+
