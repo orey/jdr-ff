@@ -171,7 +171,7 @@ Le combat s'arrête quand l'un des deux adversaire est mort (PV=0) ou s'enfuit.
 
 \deuxcolonnesbottom{%col1
 
-%\begin{minipage}[c][.6\textheight][c]{\linewidth}
+\begin{minipage}[c][0.95\textheight][c]{\linewidth}
 
 Si un PJ s'enfuit, il perd automatiquement 2 PV (dernière blessure infligée par le monstre). La chance peut être utilisée pour réduire les dommages (jet de Chance, cas 1).
 
@@ -261,12 +261,14 @@ Portes secrètes            & Le PJ doit chercher ; le MJ jette 2d6 sous la COMP
                            & Jet de CHA pour trouver comment l'ouvrir                                \\
 \end{tabular}
 
-}
-{
-
 \mysubsection{Perte d'un arme}
 
 Si un PJ perd son arme, sa COMP est diminuée de 4 jusqu'à ce qu'il trouve une autre arme.
+
+\end{minipage}
+}
+{
+\begin{minipage}[c][0.95\textheight][c]{\linewidth}
 
 \mysubsection{Fuite}
 
@@ -311,14 +313,14 @@ Les PJ peuvent consommer leurs provisions à tout moment sauf dans un combat.
 
 Le nombre de provisions dont bénéficient les PJ au départ de l'aventure dépend de différents facteurs : longueur de l'histoire, provisions disponibles dans le scénario, etc.
 
-\begin{center}
+\begin{wraptable}{r}{3.2cm}
 \begin{tabular}{lc}
-\textbf{Aventure} & \textbf{Nombre de provisions} \\
+\textbf{Aventure} & \textbf{Provisions} \\
 Courte & 2 \\
 Moyenne & 4 \\
 Longue & 6+ \\
 \end{tabular}
-\end{center}
+\end{wraptable}
 
 \mysubsection{Chercher}
 
@@ -327,6 +329,10 @@ Le PJ doit dire ce qu'il cherche. Le MJ fait les jets de dés : 2d6 strictement 
 \mysubsection{Se déplacer en silence}
 
 2d6 strictement sous COMP. Le MJ peut ajouter des malus.
+
+\mysubsection{Pickpocket}
+
+Un jet de COMP strictement réussi est un succès. Le MJ peut donner un malus (6-8 est un malus acceptable si la situation ne se prête pas à jouer au pickpocket).
 
 \mysubsection{Monstres errants}
 
@@ -346,10 +352,21 @@ En souterrain :
 \end{tabular}
 \end{center}
 
-\mysubsection{Pickpocket}
+En extérieur :
 
-Un jet de COMP strictement réussi est un succès. Le MJ peut donner un malus (6-8 est un malus acceptable si la situation ne se prête pas à jouer au pickpocket).
+\begin{center}
+\begin{tabular}{clccc}
+\textbf{1d6} &  \textbf{Créature} &  \textbf{COMP} &  \textbf{PV} &  \textbf{ATT} \\
+    1 &  Goblin               &       5 &     3 &      1 \\
+    2 &  Chauve-souris géante &       5 &     4 &      1 \\
+    3 &  Rat Géant            &       5 &     4 &      1 \\
+    4 &  Chien de guerre      &       7 &     6 &      1 \\
+    5 &  Loup-garou           &       8 &     9 &      2 \\
+    6 &  Ogre                 &       8 &    10 &      2 \\
+\end{tabular}
+\end{center}
 
+\end{minipage}
 }
 \end{frame}
 
@@ -360,17 +377,7 @@ Un jet de COMP strictement réussi est un succès. Le MJ peut donner un malus (6
 \deuxcolonnes{%col1
 
 }{
-En extérieur :
 
-\begin{tabular}{clccc}
-\textbf{1d6} &  \textbf{Créature} &  \textbf{COMP} &  \textbf{PV} &  \textbf{ATT} \\
-    1 &  Goblin               &       5 &     3 &      1 \\
-    2 &  Chauve-souris géante &       5 &     4 &      1 \\
-    3 &  Rat Géant            &       5 &     4 &      1 \\
-    4 &  Chien de guerre      &       7 &     6 &      1 \\
-    5 &  Loup-garou           &       8 &     9 &      2 \\
-    6 &  Ogre                 &       8 &    10 &      2 \\
-\end{tabular}
 }
 \end{frame}
 
